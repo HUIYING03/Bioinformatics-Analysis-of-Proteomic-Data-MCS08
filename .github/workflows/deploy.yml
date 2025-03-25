@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_SSH_PRIVATE_KEY }}
           script: |
-            cd /srv/shiny-server  
+            cd /srv/shiny-server/Bioinformatics-Analysis-of-Proteomic-Data-MCS08
             git pull origin main  # Pull latest code
             Rscript deploy.R  # Install dependencies
             sudo systemctl restart shiny-server  # Restart server
